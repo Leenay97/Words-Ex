@@ -5,16 +5,19 @@ let wordCounter = document.querySelector('.word-counter')
 let wordContainer = document.querySelector('.word-container__word')
 let button = document.querySelector('.next');
 let leave = document.querySelector('.leave');
+let prev = '1000';
 
 button.addEventListener('click', (e)=>{
     if (wordArray.length == 0) {
         wordContainer.innerHTML = "Теперь можно спать.";
         return;
     }
+     wordArray.splice(prev, 1);
     let random = Math.floor(Math.random() * wordArray.length);
+   
     wordContainer.innerHTML = wordArray[random];
-    wordArray.splice(random, 1);
     wordCounter.innerHTML = `Осталось слов: ${wordArray.length}`;
+    prev = random;
     console.log(wordArray);
 });
 leave.addEventListener('click', (e)=>{
