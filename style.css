@@ -38,10 +38,11 @@ main {
     font-weight: 500;
 
 }
-.next {
+.next, .leave {
     background-color: #ddddddbb;
     height: 30px;
-    width: 152px;
+    width: 80px;
+    margin: 0 10px;
     border: 0;
     border-radius: 6px;
     font-size: 18px;
